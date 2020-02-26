@@ -11,7 +11,6 @@ import java.util.*;
 
     public class OU7 implements Game, ConsoleInput, ConsoleOutput {
 
-
             Dice pairOfDice = new Dice(2);
             OU7Player ou7Player1;
 
@@ -31,12 +30,12 @@ import java.util.*;
             public void startGame(Membership membership) {
                 playerBuilder(membership);
                 do {
-                    System.out.println("Welcome to Over/Under 7");
+                    System.out.println("Welcome to Over/Under 7\n\n");
                     //  System.out.println("Your balance is: $%d" + ou7Player1.getBalance());
                     //  System.out.println("Enter your bet amount");
-//                this.betAmount = betAmount;
-                    Scanner in = new Scanner(System.in);
-                    Integer betAmount = Integer.valueOf(in.nextLine());
+//                      this.betAmount = betAmount;
+//                      Scanner in = new Scanner(System.in);
+//                      Integer betAmount = Integer.valueOf(in.nextLine());
                     System.out.println("Enter your bet type - Over/Under 7");
                     Scanner playerInput = new Scanner(System.in);
                     String playerGuess = playerInput.nextLine();
@@ -44,7 +43,7 @@ import java.util.*;
                 }while (!quitGame());
             }
 
-            public Boolean evaluateGuessToRoll(Dice rolledDice, String playerGuess) {
+            public Boolean evaluateGuessToRoll(Dice rolledDice, String actualGuess) {
 
                 Integer thisTurnsRoll = rolledDice.rollAndSum(pairOfDice);
                 if (actualGuess.equals("Over") && thisTurnsRoll > 7) {
@@ -81,22 +80,11 @@ import java.util.*;
 
             public Boolean win() {
 
-////      return true if(this instance of balance is > balance before the game)
-//
-//                if (evaluateGuessToRoll(, String playerGuess)){
-//                    return true;
-//                } else
-                    return null;
-
-<<<<<<< HEAD
+//           return true if(this instance of balance is > balance before the game)
+             return null;
             }
 
-            public Boolean playAgain() {
-=======
-    public Boolean playAgain() {
-        return null;
-    }
->>>>>>> e21ac28a99e8a8e9aa29a27d711519ff766529a7
+            public Boolean playAgain(){
 
                 System.out.println("Do you want to play again? Y/N");
                 Scanner in =  new Scanner(System.in);
@@ -107,7 +95,6 @@ import java.util.*;
                     return false;
             }
 
-
         public Boolean isTurn() {
                 return null;
             }
@@ -115,8 +102,8 @@ import java.util.*;
             public String getNextPlay() {
 
                 System.out.println("Enter your bet type - Over/Under 7");
-                Scanner playerGuess = new Scanner(System.in);
-                return String.valueOf(playerGuess);
+                Scanner actualGuess = new Scanner(System.in);
+                return String.valueOf(actualGuess);
             }
 
             public String displayGameState() {

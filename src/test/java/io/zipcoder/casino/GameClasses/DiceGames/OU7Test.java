@@ -1,5 +1,6 @@
 package io.zipcoder.casino.GameClasses.DiceGames;
 
+
 import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.Player.OU7Player;
 import org.junit.Assert;
@@ -34,7 +35,7 @@ public class OU7Test {
 
         //when
         String expectedName = "Fred Rogers";
-        String actualName = newPlayer.getName();
+        String actualName = newPlayer.playerAccount.getName();
 
         Integer actualAge = 40;
         Integer expectedAge = newPlayer.age;
@@ -49,6 +50,24 @@ public class OU7Test {
         Assert.assertEquals(actualAge, expectedAge);
         Assert.assertEquals(actualIdNumber, expectedIdNumber);
         Assert.assertEquals(actualBalance, expectedBalance);
+    }
+
+    @Test
+    public void startGameTest() {
+
+
+    }
+
+    public void evaluateGuessToRollTest(){
+
+        Dice rolledDice = new Dice(2);
+        String guess = "Over";
+        rolledDice.rollAndSum;
+        Boolean actual = true;
+        Boolean expected = true;
+        Assert.assertEquals(actual, expected);
+
+
     }
 
     @Test
