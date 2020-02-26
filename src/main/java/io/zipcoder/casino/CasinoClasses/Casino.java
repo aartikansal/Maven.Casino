@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 
 public class Casino{
     String casinoName = "";
-    HashMap<String, Double> Players;
+    Storage
 
     public Casino (String CasinoName){
         this.casinoName = CasinoName;
@@ -187,3 +187,4 @@ public class Casino{
         }
     }
 }
+
