@@ -2,6 +2,8 @@ package io.zipcoder.casino.GameClasses.CardGames;
 
 import io.zipcoder.casino.Player.Hand;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Stack;
 
 public class Deck {
@@ -16,7 +18,11 @@ public class Deck {
             }
         }
     }
-    public Deck Shuffle(){return null;}
+    public Deck shuffle(Deck shuffleMe){
+        Collections.shuffle(shuffleMe.currentDeck);
+        return shuffleMe;
+
+    }
 
     public Card Draw(){return null;}
 
