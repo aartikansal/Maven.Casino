@@ -22,7 +22,7 @@ public class BlackJackPlayer extends CardPlayer implements GamblerAttributes{
             this.playerAccount = playerAccount;
     }
 
-    public Integer placeBet(){
+    public Integer placeBet(Integer bet){
         Integer betPlaced = 0;
 
         return betPlaced;

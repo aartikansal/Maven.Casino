@@ -4,6 +4,6 @@ import java.util.*;
 
 public class Hand {
 
-    Map< String,Integer> handOfCards =  new HashMap< String,Integer>;
+    Map< String,Integer> handOfCards =  new HashMap<String,Integer>();
 
 }

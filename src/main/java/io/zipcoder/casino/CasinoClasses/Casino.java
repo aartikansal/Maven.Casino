@@ -6,13 +6,14 @@ import io.zipcoder.casino.Player.Player;
 
 import java.util.HashMap;
 
-public class Casino implements Game {
+public class Casino {
     String CasinoName = "";
     //HashMap<String, Double> Players;
 
     public Casino(String CasinoName) {
         this.CasinoName = CasinoName;
     }
+
 
     public Game chooseGame(String strGame) {
         return null;
@@ -63,6 +64,10 @@ public class Casino implements Game {
     }
 
     public Player playerBuilder() {
+        return null;
+    }
+
+    public Boolean isTurn() {
         return null;
     }
 
