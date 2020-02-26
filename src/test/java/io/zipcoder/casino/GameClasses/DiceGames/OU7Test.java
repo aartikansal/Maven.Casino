@@ -35,13 +35,13 @@ public class OU7Test {
 
         //when
         String expectedName = "Fred Rogers";
-        String actualName = newPlayer.playerAccount.getName();
+        String actualName = newPlayer.getName();
 
         Integer actualAge = 40;
-        Integer expectedAge = newPlayer.age;
+        Integer expectedAge = newPlayer.getAge();
 
         Integer actualIdNumber = 123;
-        Integer expectedIdNumber = newPlayer.idNumber;
+        Integer expectedIdNumber = newPlayer.getIdNumber();
         Integer actualBalance = 10000;
         Integer expectedBalance = newPlayer.getBalance();
 
@@ -60,12 +60,12 @@ public class OU7Test {
 
     public void evaluateGuessToRollTest(){
 
-        Dice rolledDice = new Dice(2);
-        String guess = "Over";
-        rolledDice.rollAndSum;
-        Boolean actual = true;
-        Boolean expected = true;
-        Assert.assertEquals(actual, expected);
+//        Dice rolledDice = new Dice(2);
+//        String guess = "Over";
+//        rolledDice.rollAndSum;
+//        Boolean actual = true;
+//        Boolean expected = true;
+//        Assert.assertEquals(actual, expected);
 
 
     }

@@ -13,7 +13,6 @@ import java.util.*;
 
             Dice pairOfDice = new Dice(2);
             OU7Player ou7Player1;
-
             Integer gameBalance = ou7Player1.getBalance();
 
             private static final Set<String> s = Collections.unmodifiableSet(new HashSet<String>(Arrays.asList("Y", "y", "N", "n")));
@@ -28,9 +27,12 @@ import java.util.*;
 
 
             public void startGame(Membership membership) {
+
                 playerBuilder(membership);
+                Boolean keepPlaying = true;
+
                 do {
-                    System.out.println("Welcome to Over/Under 7\n\n");
+                    System.out.println("Welcome to Over/Under 7" + ou7Player1.getName()+ "\n\n");
                     //  System.out.println("Your balance is: $%d" + ou7Player1.getBalance());
                     //  System.out.println("Enter your bet amount");
 //                      this.betAmount = betAmount;
@@ -39,8 +41,14 @@ import java.util.*;
                     System.out.println("Enter your bet type - Over/Under 7");
                     Scanner playerInput = new Scanner(System.in);
                     String playerGuess = playerInput.nextLine();
-                    actualGuess = playerGuess;
-                }while (!quitGame());
+                    Boolean guess = evaluateGuessToRoll(pairOfDice, playerGuess);
+
+                    keepPlaying = playAgain();
+                    //Boolean quit = quitGame();
+                    //if (quit) break; //add code to return to casino//
+
+                }while (keepPlaying == true);
+
             }
 
             public Boolean evaluateGuessToRoll(Dice rolledDice, String actualGuess) {
@@ -77,13 +85,6 @@ import java.util.*;
                     return false;
         }
 
-
-            public Boolean win() {
-
-//           return true if(this instance of balance is > balance before the game)
-             return null;
-            }
-
             public Boolean playAgain(){
 
                 System.out.println("Do you want to play again? Y/N");
@@ -95,22 +96,35 @@ import java.util.*;
                     return false;
             }
 
-        public Boolean isTurn() {
-                return null;
-            }
 
             public String getNextPlay() {
 
-                System.out.println("Enter your bet type - Over/Under 7");
-                Scanner actualGuess = new Scanner(System.in);
-                return String.valueOf(actualGuess);
+//                System.out.println("Enter your bet type - Over/Under 7");
+//                Scanner actualGuess = new Scanner(System.in);
+//                return String.valueOf(actualGuess);
+                return null;
+    }
+
+
+
+
+
+//**********************     Methods below this line have not been used      ****************************//
+
+
+        public Boolean win() {
+            return null;
+        }
+
+        public Boolean isTurn() {
+            return null;
             }
 
-            public String displayGameState() {
+        public String displayGameState() {
                 return null;
             }
 
-            public String displayNextAction() {
+        public String displayNextAction() {
                 return null;
             }
         }

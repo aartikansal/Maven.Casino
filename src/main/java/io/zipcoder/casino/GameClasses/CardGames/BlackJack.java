@@ -1,5 +1,6 @@
 package io.zipcoder.casino.GameClasses.CardGames;
 
+import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.GameClasses.GamblingGame;
 import io.zipcoder.casino.GameClasses.Game;
 import io.zipcoder.casino.Player.Player;
@@ -29,6 +30,11 @@ public class BlackJack implements GamblingGame, Game {
 
     }
 
+    @Override
+    public void startGame(Membership membership) {
+
+    }
+
     public Boolean quitGame() {
 
         return null;
@@ -41,6 +47,11 @@ public class BlackJack implements GamblingGame, Game {
 
     public Boolean playAgain() {
 
+        return null;
+    }
+
+    @Override
+    public Player playerBuilder(Membership membership) {
         return null;
     }
 
