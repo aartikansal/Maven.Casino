@@ -1,5 +1,6 @@
 package io.zipcoder.casino.Player;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import io.zipcoder.casino.GameClasses.CardGames.Card;
 import io.zipcoder.casino.GameClasses.CardGames.Deck;
 import org.junit.Assert;
@@ -8,20 +9,53 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class HandTest {
-
+Hand handOfCards = new Hand();
+Deck deckOfCards = new Deck();
     @Test
-    public void addCardToHand() {
-        Hand handOfCards = new Hand();
-        Hand handOfCards2 = new Hand();
-        Deck deckOfCards = new Deck();
-        Deck deckOfCards2 = new Deck();
+    public void addOneCardToHand() {
+        //Given
 
+
+        //When
         handOfCards.addCardToHand(deckOfCards.Draw());
-        handOfCards2.addCardToHand(deckOfCards2.Draw());
-        Assert.assertEquals(handOfCards,handOfCards2);
+        //Then
+        Integer actual = 1;
+
+        Assert.assertTrue(handOfCards.handOfCards.size() == actual);
     }
 
     @Test
     public void removeCardFromHand() {
+        //Given
+
+
+        //When
+        Card cardToRemove = handOfCards.addCardToHand(deckOfCards.Draw());
+        handOfCards.removeCardFromHand(cardToRemove);
+
+        Integer actual = 0;
+
+        Assert.assertTrue(handOfCards.handOfCards.size()==actual);
+    }
+
+
+    @Test
+    public void checkIfCardIsInHand() {
+    Card card = deckOfCards.Draw();
+    handOfCards.addCardToHand(card);
+    Boolean actual = handOfCards.checkIfCardIsInHand(card);
+    Boolean expected = true;
+    Assert.assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void checkIfCardIsNotInHand() {
+        Card card = deckOfCards.Draw();
+
+        Boolean actual = handOfCards.checkIfCardIsInHand(card);
+        Boolean expected = false;
+        Assert.assertEquals(expected,actual);
+
     }
 }
