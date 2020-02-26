@@ -101,6 +101,7 @@ crashlytics-build.properties
 fabric.properties
 target/*
 
+pom.xml
 .project
 .classpath
 .settings

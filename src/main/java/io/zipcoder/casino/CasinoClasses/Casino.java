@@ -173,6 +173,9 @@ public class Casino{
         Membership newMember = new Membership(userName,accountNumber,startingBalance,userAge);
         return newMember;
     }
+    // ******************************************************************************************** check if membership and work with them
+
+
 
     // ******************************************************************************************** Temporary main for running Casino Methods *******************************************
     public static void main(String[] args) {
