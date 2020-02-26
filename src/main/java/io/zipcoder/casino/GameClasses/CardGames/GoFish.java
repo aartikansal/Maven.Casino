@@ -44,14 +44,10 @@ public class GoFish extends CardGame {
     public Boolean isTurn() {
         return null;
     }
-<<<<<<< HEAD
 
     @Override
     public Card dealCards(Integer numberOfCards) {
         return null;
     }
 }
-=======
-}
 
->>>>>>> a32b9744b4357bb5e00558d5eaf200f62921b865

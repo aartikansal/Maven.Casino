@@ -24,7 +24,7 @@ public class Craps extends Games implements GamblingGame{
         return null;
     }
 
-    public void startGame() { }
+//    public void startGame(Membership membership) { }
 
     @Override
     public void startGame(Membership membership) {

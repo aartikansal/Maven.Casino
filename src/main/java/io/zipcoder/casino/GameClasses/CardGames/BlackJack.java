@@ -30,18 +30,15 @@ public class BlackJack extends CardGame implements GamblingGame{
         return null;
     }
 
-<<<<<<< HEAD
-=======
-    public void startGame() {
+//    public void startGame() {}
 
-    }
+
 
     @Override
     public void startGame(Membership membership) {
 
     }
 
->>>>>>> a32b9744b4357bb5e00558d5eaf200f62921b865
     public Boolean quitGame() {
 
         return null;
