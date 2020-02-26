@@ -19,5 +19,8 @@ public class OU7Player extends Player{
         return balance;
     }
 
+    public void setBalance(Integer amountToAdd) {
+        this.balance += amountToAdd;
+    }
 }
 

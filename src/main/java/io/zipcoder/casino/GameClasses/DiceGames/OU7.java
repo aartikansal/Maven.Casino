@@ -63,8 +63,9 @@ import java.util.*;
 //              Strings=in.nextLine().toUpperCase();
 //              while(s.contains("Y")||s.contains("N")){
                 if (s.equals("Y")){
+                ou7Player1.setBalance(gameBalance);
                     return true;
-                ou7Player1.Membership.balance = gameBalance; }
+                }
 
                 else
                     return false;

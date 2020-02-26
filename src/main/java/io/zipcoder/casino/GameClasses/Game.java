@@ -5,7 +5,7 @@ import io.zipcoder.casino.Player.Player;
 
 public interface Game {
 
-    public void startGame(Membership membership);
+    public void startGame();
 
     public Boolean quitGame();
 
