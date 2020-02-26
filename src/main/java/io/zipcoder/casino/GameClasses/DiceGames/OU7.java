@@ -25,7 +25,6 @@ public class OU7  implements Game, ConsoleInput, ConsoleOutput {
     }
 
     public Boolean playAgain() {
-
         return null;
     }
 
