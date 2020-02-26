@@ -16,7 +16,7 @@ import java.util.*;
             Dice pairOfDice = new Dice(2);
             OU7Player ou7Player1;
 
-            Player gameBalance = new Player();
+            Integer gameBalance = ou7Player1.getBalance();
 
             private static final Set<String> s = Collections.unmodifiableSet(new HashSet<String>(Arrays.asList("Y", "y", "N", "n")));
             private Integer betAmount;
@@ -35,6 +35,8 @@ import java.util.*;
                 this.betAmount = betAmount;
                 Scanner in = new Scanner(System.in);
                 Integer betAmount = Integer.valueOf(in.nextLine());
+                System.out.println("Enter your bet type O/U");
+
 
             }
 
@@ -60,11 +62,12 @@ import java.util.*;
         public Boolean quitGame() {
 
                 System.out.println("Do you want to quit? Y/N");
-//              Scannerin=newScanner(System.in);
+//              Scanner in=newScanner(System.in);
 //              Strings=in.nextLine().toUpperCase();
 //              while(s.contains("Y")||s.contains("N")){
                 if (s.equals("Y"))
                     return true;
+
                 else
                     return false;
             }
@@ -104,6 +107,8 @@ import java.util.*;
             }
 
             public String displayGameState() {
+
+
                 return null;
             }
 
