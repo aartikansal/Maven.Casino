@@ -1,65 +1,113 @@
 package io.zipcoder.casino.GameClasses.DiceGames;
 
-
 import io.zipcoder.casino.CasinoClasses.ConsoleInput;
 import io.zipcoder.casino.CasinoClasses.ConsoleOutput;
+import io.zipcoder.casino.CasinoClasses.ConsoleInput;
+import io.zipcoder.casino.CasinoClasses.ConsoleOutput;
+import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.GameClasses.Game;
+import io.zipcoder.casino.Player.OU7Player;
 import io.zipcoder.casino.Player.Player;
+import java.util.*;
 
-public class OU7  implements Game, ConsoleInput, ConsoleOutput {
 
-    Dice pairOfDice = new  Dice(2);
+    public class OU7 implements Game, ConsoleInput, ConsoleOutput {
 
-    public void startGame() {
+            Dice pairOfDice = new Dice(2);
+            OU7Player ou7Player1;
 
-    }
+            Player gameBalance = new Player();
 
-    public Boolean quitGame() {
+            private static final Set<String> s = Collections.unmodifiableSet(new HashSet<String>(Arrays.asList("Y", "y", "N", "n")));
+            private Integer betAmount;
 
-        return null;
-    }
+            public Player playerBuilder(Membership accountDetails) {
 
-    public Boolean win() {
+                ou7Player1 = new OU7Player(accountDetails);
+                return ou7Player1;
+            }
 
-        return null;
-    }
+            public void startGame(Membership membership) {
+                playerBuilder(membership);
+                System.out.println("Welcome to Over/Under 7");
+                System.out.println("Your balance is: $%d" + ou7Player1.getBalance());
+                System.out.println("Enter your bet amount");
+                this.betAmount = betAmount;
+                Scanner in = new Scanner(System.in);
+                Integer betAmount = Integer.valueOf(in.nextLine());
 
-    public Boolean playAgain() {
+            }
 
-        return null;
-    }
+            public Boolean evaluateGuessToRoll(Dice rolledDice, String playerGuess) {
 
-    public Player playerBuilder() {
 
-        return null;
-    }
+                Integer thisTurnsRoll = rolledDice.rollAndSum(pairOfDice);
+                if (playerGuess.equals("Over") && thisTurnsRoll > 7) {
+                   // gameBalance += betAmount;
+                    return true;
+                } else if (playerGuess.equals("Under") && thisTurnsRoll < 7) {
+                    // gameBalance += betAmount;
+                    return true;
+//                  }else if(playerGuess.equals("Equals")&&thisTurnsRoll==7){
+//                  return true;
+                } else {
+                   // gameBalance -= betAmount;
+                    return false;
+                }
+            }
 
-    public Boolean isTurn() {
-        return null;
-    }
 
-    public String getNextPlay(){
-        return null;
-    }
+        public Boolean quitGame() {
 
-    public String displayGameState() {
-        return null;
-    }
+                System.out.println("Do you want to quit? Y/N");
+//              Scannerin=newScanner(System.in);
+//              Strings=in.nextLine().toUpperCase();
+//              while(s.contains("Y")||s.contains("N")){
+                if (s.equals("Y"))
+                    return true;
+                else
+                    return false;
+            }
 
-    public String displayNextAction() {
-        return null;
-    }
 
-    public Boolean evaluateGuessToRoll(Dice rolledDice,String playerGuess){
-        Integer thisTurnsRoll = rolledDice.rollAndSum(pairOfDice);
-        if(playerGuess.equals("Over") && thisTurnsRoll >7) {
-            return true;
-        }else if(playerGuess.equals("Under") && thisTurnsRoll <7) {
-            return true;
-        }else{
-            return false;
+            public Boolean win() {
+
+//      return true if(this instance of balance is > balance before the game)
+
+                if (evaluateGuessToRoll()){
+                    return true;
+                } else
+                    return false;
+
+            }
+
+            public Boolean playAgain() {
+
+                System.out.println("Do you want to play again? Y/N");
+//              Scanner in =  newScanner(System.in);
+//              String res = in.nextLine().toUpperCase();
+//              while(s.contains("Y")||s.contains("N")){
+                if (s.equals("Y") || s.equals("y"))
+                    return true;
+                else
+                    return false;
+            }
+
+
+
+        public Boolean isTurn() {
+                return null;
+            }
+
+            public String getNextPlay() {
+                return null;
+            }
+
+            public String displayGameState() {
+                return null;
+            }
+
+            public String displayNextAction() {
+                return null;
+            }
         }
-    }
-
-
-}

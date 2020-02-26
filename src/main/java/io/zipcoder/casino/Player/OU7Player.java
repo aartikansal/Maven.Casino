@@ -14,4 +14,10 @@ public class OU7Player extends Player{
         this.age = playerAccount.getAge();
         this.playerAccount = playerAccount;
     }
+
+    public Integer getBalance() {
+        return balance;
+    }
+
 }
+
