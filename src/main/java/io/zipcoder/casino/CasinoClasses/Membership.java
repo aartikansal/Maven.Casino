@@ -22,9 +22,15 @@ public class Membership {
         return this.name;
     }
     public Integer getAge(){
+
         return this.age;
     }
     public Integer getIdNumber(){
+
         return this.idNumber;
+    }
+
+    public void setBalance(Integer amountToAdd){
+         this.balance+=amountToAdd;
     }
 }
