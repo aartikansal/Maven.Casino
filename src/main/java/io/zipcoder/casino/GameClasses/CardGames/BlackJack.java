@@ -4,8 +4,12 @@ import io.zipcoder.casino.GameClasses.GamblingGame;
 import io.zipcoder.casino.GameClasses.Game;
 import io.zipcoder.casino.Player.Player;
 
-public class BlackJack implements GamblingGame, Game {
-    public Integer placeWager() {
+public class BlackJack extends CardGame implements GamblingGame{
+
+    public void gameNamer(String nameOfGame){
+
+
+    }    public Integer placeWager() {
 
         return null;
     }
@@ -23,10 +27,6 @@ public class BlackJack implements GamblingGame, Game {
     public Boolean checkPlayerBalances() {
 
         return null;
-    }
-
-    public void startGame() {
-
     }
 
     public Boolean quitGame() {
@@ -51,6 +51,11 @@ public class BlackJack implements GamblingGame, Game {
 
     public Boolean isTurn() {
 
+        return null;
+    }
+
+    @Override
+    public Card dealCards(Integer numberOfCards) {
         return null;
     }
 }
