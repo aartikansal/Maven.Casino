@@ -10,13 +10,29 @@ public class Hand {
     public Hand(){
     }
 
-    public void addCardToHand(Card cardToBeAddedToHand){
+    public Card addCardToHand(Card cardToBeAddedToHand){
+
          handOfCards.add(cardToBeAddedToHand);
+        return cardToBeAddedToHand;
+
     }
 
 
-    public void removeCardToHand(Card cardToBeRemovedToHand){
-        handOfCards.remove(cardToBeRemovedToHand);
+    public Card removeCardFromHand(Card cardToBeRemovedToHand){
+
+            handOfCards.remove(cardToBeRemovedToHand);
+            return cardToBeRemovedToHand;
+
+    }
+
+    public Boolean checkIfCardIsInHand(Card cardToCheck){
+        for (Card cards: handOfCards) {
+            if (cards.getSuit().equals(cardToCheck.getSuit()) && cards.getRank().equals(cardToCheck.getRank())){
+             return true;
+            }
+
+        }
+        return false;
     }
 
 
