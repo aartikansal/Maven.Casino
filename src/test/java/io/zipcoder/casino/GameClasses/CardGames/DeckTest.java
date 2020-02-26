@@ -19,4 +19,14 @@ public class DeckTest {
 
     }
 
+    @Test
+    public void drawTest(){
+        Deck newDeck = new Deck();
+        Deck shuffled = newDeck.shuffle(newDeck);
+        Card expected = shuffled.currentDeck.peek();
+        Card actual = shuffled.Draw();
+        Assert.assertEquals(expected,actual);
+
+    }
+
 }
