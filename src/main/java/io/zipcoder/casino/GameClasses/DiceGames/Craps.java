@@ -22,9 +22,7 @@ public class Craps implements GamblingGame, Game {
         return null;
     }
 
-    public void startGame() {
-
-    }
+    public void startGame() { }
 
     public Boolean quitGame() {
         return null;
@@ -45,5 +43,7 @@ public class Craps implements GamblingGame, Game {
     public Boolean isTurn() {
         return null;
     }
+
+
 }
 

@@ -5,7 +5,7 @@ import io.zipcoder.casino.Player.Player;
 
 public interface Game {
 
-    public void startGame();
+    public void startGame(Membership membership);
 
     public Boolean quitGame();
 
@@ -13,7 +13,7 @@ public interface Game {
 
     public Boolean playAgain();
 
-    public Player playerBuilder();
+    public Player playerBuilder(Membership membership);
 
     public Boolean isTurn();
 }
