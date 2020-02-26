@@ -19,7 +19,7 @@ public class Hand {
         handOfCards.remove(cardToBeRemovedToHand);
     }
 
-    
+
     @Override
     public String toString(){
         String cardsInHand = "";
