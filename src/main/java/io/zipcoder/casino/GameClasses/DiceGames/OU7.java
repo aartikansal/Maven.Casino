@@ -2,8 +2,6 @@ package io.zipcoder.casino.GameClasses.DiceGames;
 
 import io.zipcoder.casino.CasinoClasses.ConsoleInput;
 import io.zipcoder.casino.CasinoClasses.ConsoleOutput;
-import io.zipcoder.casino.CasinoClasses.ConsoleInput;
-import io.zipcoder.casino.CasinoClasses.ConsoleOutput;
 import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.GameClasses.Game;
 import io.zipcoder.casino.Player.OU7Player;
@@ -35,9 +33,8 @@ import java.util.*;
                 this.betAmount = betAmount;
                 Scanner in = new Scanner(System.in);
                 Integer betAmount = Integer.valueOf(in.nextLine());
-                System.out.println("Enter your bet type O/U");
-
-
+                System.out.println("Enter your bet type - Over/Under 7");
+                Scanner playerGuess = new Scanner(System.in);
             }
 
             public Boolean evaluateGuessToRoll(Dice rolledDice, String playerGuess) {
@@ -62,11 +59,12 @@ import java.util.*;
         public Boolean quitGame() {
 
                 System.out.println("Do you want to quit? Y/N");
-//              Scanner in=newScanner(System.in);
+//              Scanner in = newScanner(System.in);
 //              Strings=in.nextLine().toUpperCase();
 //              while(s.contains("Y")||s.contains("N")){
-                if (s.equals("Y"))
+                if (s.equals("Y")){
                     return true;
+                ou7Player1.Membership.balance = gameBalance; }
 
                 else
                     return false;
@@ -97,17 +95,18 @@ import java.util.*;
             }
 
 
-
         public Boolean isTurn() {
                 return null;
             }
 
             public String getNextPlay() {
-                return null;
+
+                System.out.println("Enter your bet type - Over/Under 7");
+                Scanner playerGuess = new Scanner(System.in);
+                return String.valueOf(playerGuess);
             }
 
             public String displayGameState() {
-
 
                 return null;
             }
