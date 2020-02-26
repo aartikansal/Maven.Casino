@@ -88,9 +88,15 @@ import java.util.*;
 //                } else
                     return null;
 
+<<<<<<< HEAD
             }
 
             public Boolean playAgain() {
+=======
+    public Boolean playAgain() {
+        return null;
+    }
+>>>>>>> e21ac28a99e8a8e9aa29a27d711519ff766529a7
 
                 System.out.println("Do you want to play again? Y/N");
                 Scanner in =  new Scanner(System.in);
