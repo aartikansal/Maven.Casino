@@ -18,7 +18,7 @@ public class Deck {
     }
     public Deck Shuffle(){return null;}
 
-    public Card Draw(){return null;}
+    public Card Draw(){return currentDeck.pop();}
 
     public Hand Show(){return null;}
 

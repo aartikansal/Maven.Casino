@@ -3,6 +3,7 @@ package io.zipcoder.casino.CasinoClasses;
 import java.util.HashMap;
 
 public class Storage {
+
     private HashMap<Integer,Membership> memberStorage = new HashMap<>();
 
     public Storage(Membership membership){
@@ -18,3 +19,4 @@ public class Storage {
     }
 
 }
+
