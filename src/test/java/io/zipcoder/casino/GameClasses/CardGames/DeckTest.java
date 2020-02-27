@@ -11,11 +11,20 @@ public class DeckTest {
     @Test
     public void shuffleTest(){
         Deck newDeck = new Deck();
-        Deck shuffled = newDeck.shuffle(newDeck);
-        Card expected = newDeck.currentDeck.pop();
-        Card actual = shuffled.currentDeck.pop();
+        Deck shuffled = newDeck.shuffle();
+        Card expected = newDeck.getCurrentDeck().pop();
+        Card actual = shuffled.getCurrentDeck().pop();
 
         Assert.assertFalse(expected==actual);
+
+    }
+
+    @Test
+    public void drawTest(){
+        Deck shuffled = new Deck().shuffle();
+        Card expected = shuffled.getCurrentDeck().peek();
+        Card actual = shuffled.draw();
+        Assert.assertEquals(expected,actual);
 
     }
 

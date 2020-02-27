@@ -16,7 +16,7 @@ public class Casino{
 
     GoFish goFishGame = new GoFish();
     Craps crapsGame = new Craps();
-    OU7 ou7Game = new OU7();
+    public OU7 ou7Game = new OU7();
     BlackJack blackJackGame = new BlackJack();
 
 
@@ -223,12 +223,13 @@ public class Casino{
 
     // ******************************************************************************************** Temporary main for running Casino Methods *******************************************
     public static void main(String[] args) {
+
         Casino vegas = new Casino("King Jimmy");
         vegas.welcomeMessage();
         boolean isMember = vegas.getMemberStatus();
 
         if(isMember == false){
-            Membership current = vegas.createMembership();
+            vegas.currentMember = vegas.createMembership();
         } else {
 
             System.out.print("\n" + "Please Enter your Account Number | Pin      : ");
@@ -250,7 +251,6 @@ public class Casino{
 
         while(keepPlaying == true){
 
-            //                 "Please Enter your Account Number | Pin      : "
             System.out.println("Chose which game you would like to play     : " + "\n" + "\n");
 
             System.out.println("Game 1 : Over Under Seven " + "\n" +
@@ -263,7 +263,7 @@ public class Casino{
 
             if(gamechoice == 1){
 
-                vegas.ou7Game.startGame();
+                vegas.ou7Game.startGame(vegas.currentMember);
                 keepPlaying = vegas.playAgain();
 
             }else if(gamechoice == 2){
