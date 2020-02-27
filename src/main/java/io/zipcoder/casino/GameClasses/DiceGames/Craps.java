@@ -16,9 +16,18 @@ public class Craps extends Games implements GamblingGame{
         return null;
     }
 
+    @Override
     public Integer addWinnings() {
         return null;
     }
+
+
+    public static Integer addWinningsToPlayerBalance(CrapsPlayer playerWhoWon, Integer winnings) {
+        playerWhoWon.setGameBalance(playerWhoWon.getGameBalance()+winnings);
+        return playerWhoWon.getBalance();
+    }
+
+
 
     public Integer subtractLoses() {
         return null;
@@ -35,6 +44,7 @@ public class Craps extends Games implements GamblingGame{
         Dice twoDice = new Dice(2);
         Dealer crapsDealer = new Dealer();
         HashMap<String, Integer> betsOnTable = new HashMap<>();
+
     }
 
 
@@ -47,15 +57,6 @@ public class Craps extends Games implements GamblingGame{
     }
 
     public Boolean playAgain() {
-        return null;
-    }
-
-    @Override
-    public Player playerBuilder(Membership membership) {
-        return null;
-    }
-
-    public Player playerBuilder() {
         return null;
     }
 
