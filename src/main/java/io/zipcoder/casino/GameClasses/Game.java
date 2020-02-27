@@ -6,6 +6,7 @@ public interface Game {
 
     public void startGame();
 
+
     public Boolean quitGame();
 
     public Boolean win();

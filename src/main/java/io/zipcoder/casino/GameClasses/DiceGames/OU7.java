@@ -8,8 +8,11 @@ import io.zipcoder.casino.Player.Player;
 
 public class OU7  implements Game, ConsoleInput, ConsoleOutput {
 
+
     Dice pairOfDice = new  Dice(2);
 
+
+    @Override
     public void startGame() {
 
     }

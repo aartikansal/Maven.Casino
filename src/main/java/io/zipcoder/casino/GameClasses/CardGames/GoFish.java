@@ -4,8 +4,9 @@ import io.zipcoder.casino.GameClasses.Game;
 import io.zipcoder.casino.Player.Player;
 
 public class GoFish implements Game {
-    public void startGame() {
 
+
+    public void startGame() {
     }
 
     public Boolean quitGame() {
