@@ -4,9 +4,13 @@ import io.zipcoder.casino.GameClasses.CardGames.GoFish;
 import io.zipcoder.casino.GameClasses.DiceGames.Craps;
 import io.zipcoder.casino.GameClasses.DiceGames.OU7;
 
+import io.zipcoder.casino.GameClasses.Game;
+import io.zipcoder.casino.Player.Player;
+
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.logging.Logger;
+
 
 public class Casino{
 
@@ -20,8 +24,8 @@ public class Casino{
     BlackJack blackJackGame = new BlackJack();
 
 
-
     // ******************************************************************************************** Casino Constructor **********
+
     public Casino (String CasinoName){
         this.casinoName = CasinoName;
         storage = new Storage();
@@ -273,7 +277,7 @@ public class Casino{
 
             }else if(gamechoice == 3){
 
-                vegas.goFishGame.startGame();
+                vegas.goFishGame.startGame(vegas.currentMember);
                 keepPlaying = vegas.playAgain();
 
             }else if(gamechoice == 4){

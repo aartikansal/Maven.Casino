@@ -1,6 +1,7 @@
 package io.zipcoder.casino.Player;
 
 import io.zipcoder.casino.GameClasses.CardGames.Card;
+
 import io.zipcoder.casino.GameClasses.CardGames.Deck;
 
 public class Dealer extends Player{
@@ -13,5 +14,14 @@ public class Dealer extends Player{
     public Card dealCard(Deck theDeck){
         return theDeck.draw();
 
+
+        //Card card = new Card();
+        //return null;
     }
+
+
+
 }
+
+
+

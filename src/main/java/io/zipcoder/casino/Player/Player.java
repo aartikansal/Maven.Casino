@@ -2,6 +2,7 @@ package io.zipcoder.casino.Player;
 
 import io.zipcoder.casino.CasinoClasses.Membership;
 
+
 public abstract class Player {
     private String playerName = "";
     private Integer balance = 0;
@@ -44,6 +45,7 @@ public abstract class Player {
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
+
 
 
 
