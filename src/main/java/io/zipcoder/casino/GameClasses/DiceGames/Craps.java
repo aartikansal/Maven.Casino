@@ -1,10 +1,12 @@
 package io.zipcoder.casino.GameClasses.DiceGames;
 
+import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.GameClasses.GamblingGame;
 import io.zipcoder.casino.GameClasses.Game;
+import io.zipcoder.casino.GameClasses.Games;
 import io.zipcoder.casino.Player.Player;
 
-public class Craps implements GamblingGame, Game {
+public class Craps extends Games implements GamblingGame{
 
     public Integer placeWager() {
         return null;
@@ -22,9 +24,13 @@ public class Craps implements GamblingGame, Game {
         return null;
     }
 
-    public void startGame() {
+//    public void startGame(Membership membership) { }
+
+    @Override
+    public void startGame(Membership membership) {
 
     }
+
 
     public Boolean quitGame() {
         return null;
@@ -38,6 +44,11 @@ public class Craps implements GamblingGame, Game {
         return null;
     }
 
+    @Override
+    public Player playerBuilder(Membership membership) {
+        return null;
+    }
+
     public Player playerBuilder() {
         return null;
     }
@@ -45,5 +56,7 @@ public class Craps implements GamblingGame, Game {
     public Boolean isTurn() {
         return null;
     }
+
+
 }
 

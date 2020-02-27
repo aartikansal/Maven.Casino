@@ -1,6 +1,8 @@
 package io.zipcoder.casino.GameClasses.CardGames;
 
+import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.GameClasses.Game;
+import io.zipcoder.casino.Player.GoFishPlayer;
 import io.zipcoder.casino.Player.Player;
 import io.zipcoder.casino.Player.Hand;
 import io.zipcoder.casino.utilities.Console;
@@ -11,6 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 
+<<<<<<< HEAD
 public class GoFish implements Game {
 
     private Player player;
@@ -69,6 +72,19 @@ public class GoFish implements Game {
             return "No Cards in Deck";
         }
         else {
+=======
+public class GoFish extends CardGame {
+
+
+//    public GoFish(){
+//        this.gameName = "Go Fish";
+//    }
+
+    //playerBuilder(GoFishPlayer player1 = new GoFishPlayer(getplayerIDfromCasinoApp);
+
+    @Override
+    public void startGame(Membership membership) {
+>>>>>>> a1b7f4d963c29ebf87a03bd25231a85173638381
 
             hands.addCardToHand(cardToBeAddedToHand);
             return card.toString();
@@ -87,6 +103,11 @@ public class GoFish implements Game {
         return null;
     }
 
+    @Override
+    public Player playerBuilder(Membership membership) {
+        return null;
+    }
+
     public Player playerBuilder() {
         return null;
     }
@@ -96,5 +117,12 @@ public class GoFish implements Game {
         return null;
     }
 
+<<<<<<< HEAD
+=======
+    @Override
+    public Card dealCards(Integer numberOfCards) {
+        return null;
+    }
+>>>>>>> a1b7f4d963c29ebf87a03bd25231a85173638381
 }
 
