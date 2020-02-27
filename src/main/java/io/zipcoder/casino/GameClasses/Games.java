@@ -5,7 +5,7 @@ import io.zipcoder.casino.Player.Player;
 
 import java.util.ArrayList;
 
-public abstract class Games implements Game{
+public abstract class Games{
     private static String nameOfGame = "";
     private static ArrayList currentPlayers = new ArrayList(){};
     private static Integer numOfPlayers = currentPlayers.size();
