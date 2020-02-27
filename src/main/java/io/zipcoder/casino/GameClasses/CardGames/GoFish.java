@@ -2,6 +2,7 @@ package io.zipcoder.casino.GameClasses.CardGames;
 
 import io.zipcoder.casino.CasinoClasses.Membership;
 import io.zipcoder.casino.GameClasses.Game;
+import io.zipcoder.casino.Player.Dealer;
 import io.zipcoder.casino.Player.GoFishPlayer;
 import io.zipcoder.casino.Player.Player;
 import io.zipcoder.casino.Player.Hand;
@@ -13,13 +14,14 @@ import java.util.List;
 import java.util.Random;
 
 
-<<<<<<< HEAD
-public class GoFish implements Game {
+public class GoFish extends CardGame {
 
     private Player player;
+    private Integer num0fPlayers;
     private Hand playerHand;
     private Hand otherPlayerHand;
     private Card card;
+    private Dealer gfDealer = new Dealer();
     private Console console = new Console(System.in, System.out);
 
 
@@ -32,18 +34,7 @@ public class GoFish implements Game {
 
     private Deck deck;
 
-    //Constructor
-    public GoFish(Player player) {
-        this.player = player;
-        this.playerHand = new Hand();
-        this.otherPlayerHand = new Hand();
-       // playerFile = new ArrayList<Integer>(13);
-       // opponentFile = new ArrayList<Integer>(13);
-        endGameCheck = false;
-        this.deck = new Deck();
-        deck.shuffle();
-        turnOrder = randomTurnOrder();
-    }
+
 
     public int randomTurnOrder() {
         Random random = new Random();
@@ -51,10 +42,23 @@ public class GoFish implements Game {
     }
 
     // start the game
-    public void startGame() {
+    @Override
+    public void startGame(Membership currentMembership) {
         deck.shuffle();
-        playerHand.addCardToHand(card);
-        otherPlayerHand.addCardToHand(card);
+        for(int i=0; i<7;i++) {
+            playerHand.addCardToHand(card);
+            otherPlayerHand.addCardToHand(card);
+        }
+
+        GoFishPlayer currentPlayer= new GoFishPlayer(currentMembership);
+                this.playerHand = new Hand();
+                this.otherPlayerHand = new Hand();
+                // playerFile = new ArrayList<Integer>(13);
+                // opponentFile = new ArrayList<Integer>(13);
+                endGameCheck = false;
+                this.deck = new Deck();
+                deck.shuffle();
+                turnOrder = randomTurnOrder();
     }
 
     public void playerTurn(Card cardInHand) {
@@ -68,28 +72,18 @@ public class GoFish implements Game {
 
     // when any player says GoFish
     private String GoFish(Hand hands,Card cardToBeAddedToHand) {
-        if(deck.isEmpty()){
+        if (deck.isEmpty()) {
             return "No Cards in Deck";
-        }
-        else {
-=======
-public class GoFish extends CardGame {
-
-
-//    public GoFish(){
-//        this.gameName = "Go Fish";
-//    }
-
-    //playerBuilder(GoFishPlayer player1 = new GoFishPlayer(getplayerIDfromCasinoApp);
-
-    @Override
-    public void startGame(Membership membership) {
->>>>>>> a1b7f4d963c29ebf87a03bd25231a85173638381
+        } else {
 
             hands.addCardToHand(cardToBeAddedToHand);
             return card.toString();
         }
     }
+
+
+
+
 
     public Boolean quitGame() {
         return null;
@@ -117,12 +111,9 @@ public class GoFish extends CardGame {
         return null;
     }
 
-<<<<<<< HEAD
-=======
     @Override
     public Card dealCards(Integer numberOfCards) {
         return null;
     }
->>>>>>> a1b7f4d963c29ebf87a03bd25231a85173638381
 }
 
