@@ -2,18 +2,21 @@ package io.zipcoder.casino.Player;
 
 import io.zipcoder.casino.GameClasses.CardGames.Card;
 
+import io.zipcoder.casino.GameClasses.CardGames.Deck;
+
 public class Dealer extends Player{
 
-   // Declared the variables
-   String name="";
-   Integer idNumber=0;
-   Integer balance=0;
-   Integer age;
+    public Dealer(){
+        this.setPlayerName("Dealer");
+        this.setBalance(0);
+        }
 
-    public Card dealCard(Integer numberOfCardsToDeal){
+    public Card dealCard(Deck theDeck){
+        return theDeck.draw();
+
 
         //Card card = new Card();
-        return null;
+        //return null;
     }
 
 
