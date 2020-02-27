@@ -6,15 +6,11 @@ import io.zipcoder.casino.Player.GoFishPlayer;
 import io.zipcoder.casino.Player.Player;
 
 public class GoFish implements Game {
+    GoFishPlayer player;
 
-//    public GoFish(){
-//        this.gameName = "Go Fish";
-//    }
-
-    //playerBuilder(GoFishPlayer player1 = new GoFishPlayer(getplayerIDfromCasinoApp);
 
     public void startGame(Membership membership) {
-
+        player = new GoFishPlayer(membership);
 
     }
 

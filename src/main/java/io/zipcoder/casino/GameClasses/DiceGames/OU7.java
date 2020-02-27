@@ -22,7 +22,7 @@ public class OU7 implements Game, ConsoleInput, ConsoleOutput {
         playerBuilder(membership);
         Boolean keepPlaying = true;
 
-        while (keepPlaying == true) {
+        while (keepPlaying.equals(true)) {
             System.out.println("Welcome to Over/Under 7" + ou7Player1.getName() + "\n\n");
             System.out.println("Enter your bet type - Over/Under 7");
             Scanner playerInput = new Scanner(System.in);
@@ -31,9 +31,6 @@ public class OU7 implements Game, ConsoleInput, ConsoleOutput {
 
             keepPlaying = playAgain();
         }
-
-
-
     }
 
     // ***************************************************************************** Build Player **********************
@@ -68,13 +65,16 @@ public class OU7 implements Game, ConsoleInput, ConsoleOutput {
     // ***************************************************************************** Play Again   **********************
     public Boolean playAgain(){
 
+        boolean answer = false;
         System.out.println("Do you want to play again? Y/N");
         Scanner in =  new Scanner(System.in);
         String res = in.nextLine().toUpperCase();
-        if (res == "Y")
-            return true;
-        else
-            return false;
+        if (res == "Y" || res == "y")
+            answer = true;
+        else if (res == "n" || res == "N"){
+            answer = false;
+        }
+        return answer;
     }
     //**********************     Methods below this line have not been used      ****************************//
 
