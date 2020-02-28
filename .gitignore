@@ -9,7 +9,8 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
+pom.xml
+.idea/
 # External tool builders
 .externalToolBuilders/
 
@@ -104,3 +105,4 @@ target/*
 .project
 .classpath
 .settings
+pom.xml
